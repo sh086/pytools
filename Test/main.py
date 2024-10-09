@@ -1,17 +1,5 @@
 
 
-def learn_list():
-    # 定义列表
-    list = ['数据1']
-    # 显示长度
-    print(len(list))
-    # 追加元素,可以放不同类型的数据
-    list.append(True)
-    list.append(2)
-    print(list)
-    # 删除已有元素，若元素不存在列表中则保持
-    list.remove(2)
-    print(list)
 
 def learn_number():
     print(2 * 4)
@@ -51,9 +39,60 @@ def learn_str():
     """
     print(line_str)
 
+    # 字符串长度
+    s = "Hello Word"
+    print(len(s))
+
+    # 通过索引获取单个字段
+    print(s[len(s) - 1])
+
+def learn_list():
+    # 定义列表
+    list = ['数据1']
+    # 显示长度
+    print(len(list))
+    # 追加元素,可以放不同类型的数据
+    list.append(True)
+    list.append(2)
+    print(list)
+    # 删除已有元素，若元素不存在列表中则保持
+    list.remove(2)
+    print(list)
+
+    # 打印列表中的最大值,仅可用户全部是数字的列表
+    list2 = [1,2]
+    print(max(list2)) # 打印列表中的最大值
+    print(min(list2)) # 打印列表中的最小值
+    print(sorted(list2)) # 打印排序好的列表
 
 if __name__ == '__main__':
-    learn_number()
+    # 一百万求和：for + range
+    # range左闭右开
+    # total = 0
+    # for i in range(1,101,1):
+    #     total += i
+    # print(total)
+
+    # 新建通讯录
+    contacts = {"小明":123 }
+    contacts['小红'] = 245
+    # 判断键是否在字典中
+    print("小红" in contacts)
+    # 在字典中删除键值对，若不存在则报错
+    del contacts['小明']
+    # 查看键值对数量
+    print(len(contacts))
+
+    print(str(3)+"s")
+
+
+
+    # .items() 返回所有键值对
+    # .keys 返回所有键
+    # .values 返回所有值
+    for a,b in contacts.items():
+        print(a,b)
+        print(b)
 
 
 
